@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
 html{
-    box-sizing: border-box;
-}
-a {
-    text-decoration: none;
+    /*box-sizing: border-box;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; */
 }
 .header h1{
     margin-left: auto;
     margin-right: auto;
+}
+header {
+    margin: -10px -20px -20px -20px;
+    padding:20px;
+    padding-bottom: 0px;
+    color: #F8F9ED;
 }
 .title {
     font-family: 'Black Ops One', sans-serif;
@@ -30,7 +37,6 @@ a {
    position: absolute;
 }
 .button {
-    border: 1px solid grey;
     color:#F8F9ED;
     display: inline-flex;
     justify-content: center;
@@ -43,12 +49,15 @@ a {
     padding-right: 8px;
     padding-top: 8px;
     padding-bottom: 0px;
+    text-decoration: none;
 }
 .visiting{
-   background-color: rgba(148, 215, 232, 0.6);
+    background:url(images/what_we_do_background.png);
+    
 }
 .button:hover {
-    background-color: rgba(148, 215, 232, 0.6);
+    background-color: rgba(53, 102, 148, 0.6);
+;
 }
 body {
 	background-color:#D2D2D0;
@@ -66,8 +75,26 @@ body {
 	margin-right:auto;
 	width:80%;
 }
+.textbox{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 26px;
+    line-height: 1.5;
+}
 .image {
     text-align:center;
+}
+.icon{
+    display: flex;
+    
+    align-content: stretch;
+    position: relative;
+    padding-top: 10px;
+}
+.strip{
+    font-size: 28px;
+    padding: 15px auto 15px auto;
+    
 }
 .email {
     text-decoration:none;
@@ -75,18 +102,19 @@ body {
 #t01 {
     border: 1px solid black;
     border-collapse: collapse;
+	margin-bottom:10px;
 
 }
 th, td {
     padding: 5px;
 }
-header, footer, .box {
+header, footer {
 	text-align: center;
 	background-image:url("https://digitalsynopsis.com/wp-content/uploads/2013/12/subtle-patterns-website-7.gif");
 	color: #F8F9ED;
 }
-header, footer{
-    margin: -10px -20px -20px -20px;
+footer{
+    margin: 0px -20px -20px -20px;
     padding:20px;
     padding-bottom: 0px;
     color: #F8F9ED;
@@ -115,10 +143,10 @@ header, footer{
     width: 80%;
     border-radius: 5px;
     text-align: center;
-    font-size: 34px;
     border-radius: 3px;
-
+    background:url(images/what_we_do_background.png);
 }
+
 .title-text{
     font-size: 46px;
     text-align: center;
@@ -131,7 +159,7 @@ header, footer{
 }
 .list-item{
     border: 0.5px solid rgba(0, 0, 0, 0.7);
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     box-shadow: 0.5px 0.5px 8px 1px rgba(0, 0, 0, 0.5);
     padding: 10px; 
     color: white;
@@ -198,16 +226,25 @@ header, footer{
    display: none;
     
 }
-.fadeInUp{
+.fade-in-up{
     animation-name: fadeInUp;
     animation-duration: 1s;
     animation-fill-mode: both;
 }
 .animate-second{
-    animation-delay: .25s;
+    animation-delay: .05s;
 }
 .animate-later{
-    animation-delay: .467s;
+    animation-delay: .2s;
+}
+.train-animation {
+    animation-delay: .65s;
+}
+.care-animation {
+    animation-delay: .85s;
+}
+.respect-animation {
+    animation-delay: 1s;
 }
 #training{
     background-image: 
@@ -217,7 +254,13 @@ header, footer{
     background-repeat: no-repeat;
 }
 #caring{
-    background-image: url('take-care-of.jpg');
+    background-image: url(http://cdn.mamamia.com.au/wp/wp-content/uploads/2016/04/27102232/hugging-dogs-is-it-ok-600x315.jpg);
+    background-position: center;
+    background-size: 100% ;
+    background-repeat: no-repeat;
+}
+#respect{
+    background-image: url(https://www.lovethatpet.com/wp-content/uploads/2014/06/dog-paw-and-hand1.jpg);
     background-position: center;
     background-size: 100% ;
     background-repeat: no-repeat;
@@ -233,4 +276,82 @@ header, footer{
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     transform: none;
     }
+}
+meter {
+    margin:15px 55px 15px 100px;
+    width:120%;
+}
+meter.competitor::before {
+    content:'Competitors';
+    
+}
+meter.competitor::after {
+    content:'15';
+}
+meter.company::before {
+    content:'Poodle Security';
+}
+meter.company::after{
+    content:'35';
+}
+.meter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.meter-description {
+    margin-left: auto;
+    margin-right:10px;
+    margin-bottom: 25px;
+    font-size: 26px;
+    padding:25px;
+    background-color: #356694;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    border: 5px double black;
+    color: white;
+}
+.progress-bar {
+  background-color: whiteSmoke;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  width: 250px;
+  height: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+progress[value]::after{
+    content:'45%';
+}
+
+.media-left,
+.media-right {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.media-left {
+  margin-right: 1rem;
+}
+
+.media-content {
+  flex-basis: auto;
+  flex-grow: 1;
+  flex-shrink: 1;
+  text-align: left;
+}
+
+.media {
+  align-items: flex-start;
+  display: flex;
+  text-align: left;
+   background-color: #fff;
+    /*box-shadow: 0.5px 0.5px 8px 2px rgba(0, 0, 0, 0.5);*/
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    padding: 1.25rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
